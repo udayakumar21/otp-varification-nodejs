@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const { parsePhoneNumber } = require('libphonenumber-js'); // Add this line to import libphonenumber-js
-const accountSid = 'ACe31aa8022e67a9986a9334ce929602f1'; // Your Account SID from www.twilio.com/console
-const authToken = 'ae8d82a174b28f5da730a66c824bcc53'; // Your Auth Token from www.twilio.com/console
+const accountSid = ''; // Your Account SID from www.twilio.com/console
+const authToken = ''; // Your Auth Token from www.twilio.com/console
 
 const client = require('twilio')(accountSid, authToken);
 const app = express();
@@ -47,7 +47,7 @@ app.post('/otp', (req, res) => {
         // Send OTP message to user's phone number
         client.messages.create({
             body: `Your OTP is ${otp}`,
-            from: '+16073501494', // Replace with your Twilio phone number
+            from: '', // Replace with your Twilio phone number
             to: formattedNumber
         }).then(() => {
             res.send(`
