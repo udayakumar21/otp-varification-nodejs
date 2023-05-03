@@ -1,6 +1,6 @@
 # otp-varification-nodejs
-Your Account SID from www.twilio.com/console </br>
-Your Auth Token from www.twilio.com/console</br>
+Your Account SID from www.twilio.com </br>
+Your Auth Token from www.twilio.com</br>
 
 node app.js <br>
 
